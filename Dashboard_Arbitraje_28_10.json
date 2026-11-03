@@ -1,0 +1,645 @@
+[
+    {
+        "id": "f1",
+        "type": "tab",
+        "label": "Arbitraje",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f1974f52ca5cb908",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "ut",
+        "type": "ui-theme",
+        "name": "Tema",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "up",
+        "type": "ui-page",
+        "name": "Arbitraje",
+        "ui": "f1974f52ca5cb908",
+        "path": "/arbitraje",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "ut",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "g1",
+        "type": "ui-group",
+        "name": "Estado del sistema",
+        "page": "up",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "up2",
+        "type": "ui-page",
+        "name": "Manual",
+        "ui": "f1974f52ca5cb908",
+        "path": "/manual",
+        "icon": "settings",
+        "layout": "grid",
+        "theme": "ut",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "g2",
+        "type": "ui-group",
+        "name": "Asignación manual",
+        "page": "up2",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "e1",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.10.1",
+        "port": "102",
+        "rack": "0",
+        "slot": "1",
+        "localtsaphi": "",
+        "localtsaplo": "",
+        "remotetsaphi": "",
+        "remotetsaplo": "",
+        "connmode": "rack-slot",
+        "adapter": "",
+        "busaddr": "",
+        "cycletime": "500",
+        "timeout": "2000",
+        "name": "PLC Central",
+        "vartable": [
+            {
+                "addr": "DB1,I0",
+                "name": "Cliente_Activo"
+            },
+            {
+                "addr": "DB1,I2",
+                "name": "Cola1"
+            },
+            {
+                "addr": "DB1,I4",
+                "name": "Cola2"
+            },
+            {
+                "addr": "DB1,I6",
+                "name": "Cola3"
+            },
+            {
+                "addr": "DB1,I8",
+                "name": "Cola4"
+            },
+            {
+                "addr": "DB1,I10",
+                "name": "Cola_Longitud"
+            },
+            {
+                "addr": "DB1,I14",
+                "name": "Tiempo_Restante"
+            },
+            {
+                "addr": "DB1,I26",
+                "name": "Motivo_Ultimo_Fin"
+            },
+            {
+                "addr": "DB1,I28",
+                "name": "Cliente_Anterior"
+            },
+            {
+                "addr": "DB1,DI30",
+                "name": "Total_Asignaciones"
+            },
+            {
+                "addr": "DB10,X20.2",
+                "name": "C1_Conectado"
+            },
+            {
+                "addr": "DB10,X8.1",
+                "name": "C1_EnCola"
+            },
+            {
+                "addr": "DB10,I10",
+                "name": "C1_Asignado"
+            },
+            {
+                "addr": "DB10,I16",
+                "name": "C1_Pos"
+            },
+            {
+                "addr": "DB10,I14",
+                "name": "C1_Turnos"
+            },
+            {
+                "addr": "DB10,X48.2",
+                "name": "C2_Conectado"
+            },
+            {
+                "addr": "DB10,X36.1",
+                "name": "C2_EnCola"
+            },
+            {
+                "addr": "DB10,I38",
+                "name": "C2_Asignado"
+            },
+            {
+                "addr": "DB10,I44",
+                "name": "C2_Pos"
+            },
+            {
+                "addr": "DB10,I42",
+                "name": "C2_Turnos"
+            },
+            {
+                "addr": "DB10,X76.2",
+                "name": "C3_Conectado"
+            },
+            {
+                "addr": "DB10,X64.1",
+                "name": "C3_EnCola"
+            },
+            {
+                "addr": "DB10,I66",
+                "name": "C3_Asignado"
+            },
+            {
+                "addr": "DB10,I72",
+                "name": "C3_Pos"
+            },
+            {
+                "addr": "DB10,I70",
+                "name": "C3_Turnos"
+            },
+            {
+                "addr": "DB10,X104.2",
+                "name": "C4_Conectado"
+            },
+            {
+                "addr": "DB10,X92.1",
+                "name": "C4_EnCola"
+            },
+            {
+                "addr": "DB10,I94",
+                "name": "C4_Asignado"
+            },
+            {
+                "addr": "DB10,I100",
+                "name": "C4_Pos"
+            },
+            {
+                "addr": "DB10,I98",
+                "name": "C4_Turnos"
+            },
+            {
+                "addr": "DB1,X20.0",
+                "name": "Modo_Manual"
+            },
+            {
+                "addr": "DB1,I22",
+                "name": "Cliente_Forzado"
+            },
+            {
+                "addr": "DB1,I12",
+                "name": "Tiempo_Turno_Config"
+            },
+            {
+                "addr": "DB10,X21.0",
+                "name": "Lib_C1"
+            },
+            {
+                "addr": "DB10,X49.0",
+                "name": "Lib_C2"
+            },
+            {
+                "addr": "DB10,X77.0",
+                "name": "Lib_C3"
+            },
+            {
+                "addr": "DB10,X105.0",
+                "name": "Lib_C4"
+            }
+        ]
+    },
+    {
+        "id": "fn1",
+        "type": "function",
+        "z": "f1",
+        "name": "Procesar",
+        "func": "const p=msg.payload;\nif(!p||p.Cliente_Activo===undefined)return null;\nflow.set('lastRx',Date.now());\nflow.set('clienteActivo',Number(p.Cliente_Activo));\nconst MOT={0:'—',1:'Expiración',2:'Liberación',3:'Desconexión',4:'Deshabilitado',5:'Manual'};\nconst mmss=s=>{s=Math.max(0,s|0);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');};\nconst a=p.Cliente_Activo;\nconst ok=(a>=1&&a<=4);\nconst asig=ok?p['C'+a+'_Asignado']:0;\nconst rest=ok?p.Tiempo_Restante:0;\nconst n=Math.min(Math.max(p.Cola_Longitud,0),4);\nconst cola=[p.Cola1,p.Cola2,p.Cola3,p.Cola4].slice(0,n).map(c=>'C'+c);\nconst cl=[1,2,3,4].map(i=>{const con=p['C'+i+'_Conectado'],q=p['C'+i+'_EnCola'];return {id:'C'+i,con:con,enCola:q,pos:p['C'+i+'_Pos'],turnos:p['C'+i+'_Turnos'],est:!con?'D':(a===i?'A':(q?'Q':'L'))};});\nmsg.payload={activoTxt:ok?'C'+a:'Línea libre',asigTxt:mmss(asig),restTxt:mmss(rest),pct:asig>0?Math.min(100,Math.max(0,rest*100/asig)):0,cola:cola,clientes:cl,motivo:MOT[p.Motivo_Ultimo_Fin]||'?',anterior:p.Cliente_Anterior>0?'C'+p.Cliente_Anterior:'—',total:p.Total_Asignaciones,modo:p.Modo_Manual,forzado:p.Cliente_Forzado,tconfig:p.Tiempo_Turno_Config};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 100,
+        "wires": [
+            [
+                "t1",
+                "t2"
+            ]
+        ]
+    },
+    {
+        "id": "ij",
+        "type": "inject",
+        "z": "f1",
+        "name": "Cada 1 s",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "fn2"
+            ]
+        ]
+    },
+    {
+        "id": "fn2",
+        "type": "function",
+        "z": "f1",
+        "name": "Vigilancia (sin datos > 1,5 s)",
+        "func": "const t=flow.get('lastRx')||0;\nif(Date.now()-t>1500)return {payload:{sinDatos:true}};\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 180,
+        "wires": [
+            [
+                "t1",
+                "t2"
+            ]
+        ]
+    },
+    {
+        "id": "t1",
+        "type": "ui-template",
+        "z": "f1",
+        "group": "g1",
+        "page": "",
+        "ui": "",
+        "name": "Tablero",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "head": "",
+        "format": "<template>\n<div v-if=\"!msg || !msg.payload\">Esperando datos</div>\n<div v-else-if=\"msg.payload.sinDatos\" style=\"background:#fdecea;border:2px solid #d32f2f;color:#b71c1c;border-radius:12px;padding:20px;font-size:20px;font-weight:bold;text-align:center\">SIN DATOS: enlace con el PLC Central perdido</div>\n<div v-else>\n<div style=\"font-size:12px;color:#2e7d32;margin-bottom:8px\">● Enlace con el PLC Central: activo</div>\n<div :style=\"{background: msg.payload.activoTxt === 'Línea libre' ? '#eceff1' : '#e8f5e9', border: '2px solid ' + (msg.payload.activoTxt === 'Línea libre' ? '#90a4ae' : '#2e7d32'), borderRadius: '12px', padding: '20px'}\">\n<div style=\"font-size:13px;letter-spacing:1px;color:#546e7a\">PLC CON CONTROL ACTIVO</div>\n<div :style=\"{fontSize:'48px', fontWeight:'bold', color: msg.payload.activoTxt === 'Línea libre' ? '#455a64' : '#1b5e20'}\">{{ msg.payload.activoTxt }}</div>\n<div style=\"font-size:13px;letter-spacing:1px;color:#546e7a;margin-top:8px\">TIEMPO RESTANTE</div>\n<div style=\"font-size:40px;font-weight:bold;color:#263238\">{{ msg.payload.restTxt }}</div>\n<div style=\"font-size:14px;color:#546e7a;margin-bottom:8px\">Tiempo asignado: {{ msg.payload.asigTxt }}</div>\n<div style=\"background:#cfd8dc;border-radius:8px;height:22px;overflow:hidden\">\n<div :style=\"{width: msg.payload.pct + '%', height: '100%', transition: 'width 0.4s', background: msg.payload.pct > 50 ? '#2e7d32' : (msg.payload.pct > 20 ? '#f9a825' : '#c62828')}\"></div>\n</div>\n</div>\n<div style=\"margin-top:16px\">\n<div style=\"font-size:13px;letter-spacing:1px;color:#546e7a;margin-bottom:6px\">COLA DE ESPERA</div>\n<div v-if=\"msg.payload.cola.length\" style=\"display:flex;flex-wrap:wrap;gap:8px\">\n<div v-for=\"(q, i) in msg.payload.cola\" :key=\"i\" style=\"background:#fff8e1;border:2px solid #f9a825;border-radius:20px;padding:6px 16px;font-weight:bold;color:#e65100\">{{ i + 1 }} · {{ q }}</div>\n</div>\n<div v-else style=\"color:#78909c\">Sin solicitudes en espera</div>\n</div>\n<div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:16px\">\n<div v-for=\"c in msg.payload.clientes\" :key=\"c.id\" :style=\"{background: {D:'#ffebee',A:'#e8f5e9',Q:'#fff8e1',L:'#e3f2fd'}[c.est], border: '2px solid ' + {D:'#c62828',A:'#2e7d32',Q:'#f9a825',L:'#1565c0'}[c.est], borderRadius:'12px', padding:'14px'}\">\n<div style=\"font-size:26px;font-weight:bold;color:#263238\">{{ c.id }}</div>\n<div :style=\"{fontSize:'13px', fontWeight:'bold', letterSpacing:'1px', color: {D:'#b71c1c',A:'#1b5e20',Q:'#e65100',L:'#0d47a1'}[c.est]}\">{{ c.est === 'D' ? 'DESCONECTADO' : (c.est === 'A' ? 'ACTIVO' : (c.est === 'Q' ? 'EN COLA #' + c.pos : 'LIBRE')) }}</div>\n<div style=\"font-size:13px;color:#546e7a;margin-top:6px\">Turnos: {{ c.turnos }}</div>\n</div>\n</div>\n<div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:16px\">\n<div style=\"background:#f5f5f5;border-radius:10px;padding:12px\"><div style=\"font-size:12px;color:#546e7a\">ÚLTIMO FIN</div><div style=\"font-size:18px;font-weight:bold;color:#263238\">{{ msg.payload.motivo }}</div></div>\n<div style=\"background:#f5f5f5;border-radius:10px;padding:12px\"><div style=\"font-size:12px;color:#546e7a\">PLC ANTERIOR</div><div style=\"font-size:18px;font-weight:bold;color:#263238\">{{ msg.payload.anterior }}</div></div>\n<div style=\"background:#f5f5f5;border-radius:10px;padding:12px\"><div style=\"font-size:12px;color:#546e7a\">ASIGNACIONES</div><div style=\"font-size:18px;font-weight:bold;color:#263238\">{{ msg.payload.total }}</div></div>\n</div>\n</div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 640,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "itest",
+        "type": "inject",
+        "z": "f1",
+        "d": true,
+        "name": "PRUEBA datos falsos",
+        "props": [
+            {
+                "p": "payload",
+                "v": "{\"Cliente_Activo\":2,\"Cola1\":3,\"Cola2\":4,\"Cola3\":0,\"Cola4\":0,\"Cola_Longitud\":2,\"Tiempo_Restante\":900,\"Motivo_Ultimo_Fin\":2,\"Cliente_Anterior\":1,\"Total_Asignaciones\":12,\"C1_Conectado\":true,\"C1_EnCola\":false,\"C1_Asignado\":1800,\"C1_Pos\":0,\"C1_Turnos\":5,\"C2_Conectado\":true,\"C2_EnCola\":false,\"C2_Asignado\":1800,\"C2_Pos\":0,\"C2_Turnos\":4,\"C3_Conectado\":true,\"C3_EnCola\":true,\"C3_Asignado\":0,\"C3_Pos\":1,\"C3_Turnos\":3,\"C4_Conectado\":false,\"C4_EnCola\":true,\"C4_Asignado\":0,\"C4_Pos\":2,\"C4_Turnos\":20}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 180,
+        "y": 40,
+        "wires": [
+            [
+                "fn1"
+            ]
+        ]
+    },
+    {
+        "id": "t2",
+        "type": "ui-template",
+        "z": "f1",
+        "group": "g2",
+        "page": "",
+        "ui": "",
+        "name": "Panel manual",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "head": "",
+        "format": "<template>\n<div v-if=\"!msg || !msg.payload\">Esperando datos</div>\n<div v-else-if=\"msg.payload.sinDatos\" style=\"background:#fdecea;border:2px solid #d32f2f;color:#b71c1c;border-radius:12px;padding:20px;font-weight:bold\">SIN DATOS: enlace con el PLC Central perdido</div>\n<div v-else>\n<div style=\"background:#fff3e0;border:2px solid #ef6c00;border-radius:12px;padding:12px;color:#e65100;font-weight:bold\">Panel sin protección de acceso.</div>\n<div style=\"margin-top:12px\">Modo manual: <b>{{ msg.payload.modo === undefined ? '—' : (msg.payload.modo ? 'ACTIVO' : 'Inactivo') }}</b></div>\n<div>PLC forzado: <b>{{ msg.payload.forzado === undefined ? '—' : msg.payload.forzado }}</b></div>\n<div>Tiempo de turno configurado: <b>{{ msg.payload.tconfig === undefined ? '—' : msg.payload.tconfig + ' s' }}</b></div>\n<hr style=\"margin:14px 0\">\n<label style=\"font-weight:bold\"><input type=\"checkbox\" v-model=\"hab\"> Habilitar escritura</label>\n<div style=\"margin-top:12px\">PLC a asignar:\n<select v-model.number=\"sel\" style=\"border:1px solid #90a4ae;border-radius:6px;padding:4px 8px\"><option :value=\"1\">C1</option><option :value=\"2\">C2</option><option :value=\"3\">C3</option><option :value=\"4\">C4</option></select>\n<button :disabled=\"!hab\" @click=\"asignar()\" style=\"margin-left:8px;padding:6px 14px;border-radius:6px;background:#1565c0;color:#fff;border:none\">Asignar turno</button>\n<button :disabled=\"!hab\" @click=\"desactivar()\" style=\"margin-left:8px;padding:6px 14px;border-radius:6px;background:#546e7a;color:#fff;border:none\">Volver a automático</button>\n<button :disabled=\"!hab\" @click=\"liberar()\" style=\"margin-left:8px;padding:6px 14px;border-radius:6px;background:#c62828;color:#fff;border:none\">Liberar turno</button></div>\n<div style=\"margin-top:12px\">Tiempo de turno (60 a 5400 s):\n<input type=\"number\" v-model.number=\"t\" min=\"60\" max=\"5400\" style=\"width:90px;border:1px solid #90a4ae;border-radius:6px;padding:4px 8px\">\n<button :disabled=\"!hab\" @click=\"fijarTiempo()\" style=\"margin-left:8px;padding:6px 14px;border-radius:6px;background:#1565c0;color:#fff;border:none\">Aplicar tiempo</button>\n</div>\n<div style=\"margin-top:10px;color:#37474f\">{{ info }}</div>\n</div>\n</template>\n<script>\nexport default {\n  data() { return { hab: false, sel: 1, t: 1800, info: '' } },\n  methods: {\n    liberar() {\n      if (!confirm('¿Quitar el turno al cliente activo?')) return;\n      this.send({ topic: 'liberar', payload: true });\n      this.info = 'Enviado: liberar turno';\n    },\n    asignar() {\n      if (!confirm('¿Asignar el control a C' + this.sel + '?')) return;\n      this.send({ topic: 'forzado', payload: this.sel });\n      this.send({ topic: 'manual', payload: true });\n      this.info = 'Enviado: asignar C' + this.sel;\n    },\n    desactivar() {\n      if (!confirm('¿Volver al modo automático?')) return;\n      this.send({ topic: 'manual', payload: false });\n      this.send({ topic: 'forzado', payload: 0 });\n      this.info = 'Enviado: modo automático';\n    },\n    fijarTiempo() {\n      if (!(this.t >= 60 && this.t <= 5400)) { this.info = 'Valor fuera de rango (60 a 5400 s)'; return; }\n      if (!confirm('¿Fijar el tiempo de turno en ' + this.t + ' s? Aplica a los turnos nuevos.')) return;\n      this.send({ topic: 'tiempo', payload: this.t });\n      this.info = 'Enviado: ' + this.t + ' s';\n    }\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 660,
+        "y": 180,
+        "wires": [
+            [
+                "fl1"
+            ]
+        ]
+    },
+    {
+        "id": "fl1",
+        "type": "function",
+        "z": "f1",
+        "name": "Filtro de escritura",
+        "func": "const t = msg.topic, v = msg.payload;\nconst log = (ok, txt) => ({ payload: { fecha: new Date().toISOString(), topic: t, valor: v, resultado: ok ? 'ACEPTADO' : 'RECHAZADO', detalle: txt } });\nif (t === 'manual' && typeof v === 'boolean') return [{ payload: v }, null, null, log(true, 'Modo_Manual')];\nif (t === 'forzado' && Number.isInteger(v) && v >= 0 && v <= 4) return [null, { payload: v }, null, log(true, 'Cliente_Forzado')];\nif (t === 'tiempo' && Number.isInteger(v) && v >= 60 && v <= 5400) return [null, null, { payload: v }, log(true, 'Tiempo_Turno_Config')];\nif (t === 'liberar' && v === true) {\n    const a = flow.get('clienteActivo');\n    if (Number.isInteger(a) && a >= 1 && a <= 4) {\n        const out = [null, null, null, log(true, 'Liberacion_Pendiente C' + a), null, null, null, null];\n        out[3 + a] = { payload: true };\n        return out;\n    }\n    return [null, null, null, log(false, 'sin cliente activo')];\n}\nreturn [null, null, null, log(false, 'fuera de lista o de rango')];",
+        "outputs": 8,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "so1"
+            ],
+            [
+                "so2"
+            ],
+            [
+                "so3"
+            ],
+            [
+                "rg1"
+            ],
+            [
+                "b9267593e8e98f05"
+            ],
+            [
+                "b4ebb3e36b424cd6"
+            ],
+            [
+                "e7f38f38e9ef37e1"
+            ],
+            [
+                "87bb649367a6d5be"
+            ]
+        ]
+    },
+    {
+        "id": "rg1",
+        "type": "debug",
+        "z": "f1",
+        "name": "Registro de escrituras",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 740,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ip1",
+        "type": "inject",
+        "z": "f1",
+        "name": "Prueba: tiempo 20 (debe rechazar)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "tiempo",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 210,
+        "y": 440,
+        "wires": [
+            [
+                "fl1"
+            ]
+        ]
+    },
+    {
+        "id": "i1",
+        "type": "s7 in",
+        "z": "f1",
+        "endpoint": "e1",
+        "mode": "all",
+        "variable": "",
+        "diff": false,
+        "name": "Lectura DB1 y DB10",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "fn1"
+            ]
+        ]
+    },
+    {
+        "id": "so1",
+        "type": "s7 out",
+        "z": "f1",
+        "endpoint": "e1",
+        "variable": "Modo_Manual",
+        "name": "Escribe Modo_Manual",
+        "x": 730,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "so2",
+        "type": "s7 out",
+        "z": "f1",
+        "endpoint": "e1",
+        "variable": "Cliente_Forzado",
+        "name": "Escribe Cliente_Forzado",
+        "x": 740,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "so3",
+        "type": "s7 out",
+        "z": "f1",
+        "endpoint": "e1",
+        "variable": "Tiempo_Turno_Config",
+        "name": "Escribe Tiempo_Turno_Config",
+        "x": 750,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b9267593e8e98f05",
+        "type": "s7 out",
+        "z": "f1",
+        "endpoint": "e1",
+        "variable": "Lib_C1",
+        "name": "Lib_C1",
+        "x": 700,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b4ebb3e36b424cd6",
+        "type": "s7 out",
+        "z": "f1",
+        "endpoint": "e1",
+        "variable": "Lib_C2",
+        "name": "Lib_C2",
+        "x": 700,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e7f38f38e9ef37e1",
+        "type": "s7 out",
+        "z": "f1",
+        "endpoint": "e1",
+        "variable": "Lib_C3",
+        "name": "Lib_C3",
+        "x": 700,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "87bb649367a6d5be",
+        "type": "s7 out",
+        "z": "f1",
+        "endpoint": "e1",
+        "variable": "Lib_C4",
+        "name": "Lib_C4",
+        "x": 700,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "6b7c81a472786a8c",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.31.0",
+            "node-red-contrib-s7": "3.1.3"
+        }
+    }
+]
