@@ -1,0 +1,24 @@
+Dependencias de la interfaz de visualización (Node-RED)
+Sistema de arbitraje por conmutador de red — Laboratorio de Automatización Industrial, UVG
+
+Flujo: Dashboard_Arbitraje_28_10.json (25 nodos, sin credenciales)
+
+Entorno
+- Node.js: versión compatible con Node-RED (Node-RED 4 requiere Node.js 18 o superior; se recomienda una versión LTS)
+- Node-RED: instalación local en la PC del laboratorio (192.168.10.20)
+    npm install -g --unsafe-perm node-red
+
+Paquetes de la paleta (Menú > Manage palette > Install)
+- @flowfuse/node-red-dashboard   1.31.0   (Dashboard 2.0; no usar node-red-dashboard v1, obsoleto)
+- node-red-contrib-s7            3.1.3    (comunicación S7 con el PLC Central)
+
+Conexión "PLC Central" (nodo de configuración s7)
+- Transporte: ISO-on-TCP
+- IP: 192.168.10.1   Puerto: 102   Rack: 0   Slot: 1
+- Ciclo de lectura: 500 ms   Timeout: 2000 ms
+- Requisitos en el PLC: acceso PUT/GET habilitado; DB1 (DB_Arbitraje) y DB10 (DB_Clientes) con acceso estándar
+
+Páginas
+- Editor:             http://127.0.0.1:1880
+- Tablero de estado:  http://127.0.0.1:1880/dashboard/arbitraje
+- Panel manual:       http://127.0.0.1:1880/dashboard/manual
